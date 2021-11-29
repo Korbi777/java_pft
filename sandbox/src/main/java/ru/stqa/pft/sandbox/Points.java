@@ -3,8 +3,12 @@ package ru.stqa.pft.sandbox;
 public class Points {
 
     public static void main(String[] args) {
-        Point p = new Point(-5,7,2,-2);
+        Point p1 = new Point(-5,7);
+        Point p2 = new Point(2,3);
 
-        System.out.println("Дистанция между точками: " + "(" + p.x1 + ";" + p.x2 + ")" + " и " + "(" + p.y1 + ";" + p.y2 + ")" + " = " + p.distance());
+        System.out.println("Дистанция между точками: " + "(" + p1.x + ";" + p1.y + ")" + " и " + "(" + p1.x + ";" + p2.y + ")" + " = " + p1.distance(p2));
+    }
+    public static double distance(Point p1, Point p2) {
+        return Math.sqrt((p2.y - p1.x) * (p2.y - p1.x) + (p2.y - p1.x)*(p2.y - p1.x));
     }
 }
