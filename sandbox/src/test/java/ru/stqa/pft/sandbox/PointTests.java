@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 public class PointTests {
 
-
     @Test
     public void testPoints() {
         Point p1 = new Point(1,0);
@@ -19,7 +18,8 @@ public class PointTests {
         Point p1 = new Point(1,0);
         Point p2 = new Point(4,5);
 
-        Assert.assertNotNull(p1.distance(p2), null);
+        Assert.assertNotEquals(p1.distance(p2), 1);
     }
+
 }
 
