@@ -18,7 +18,7 @@ public class ApplicationManager {
     private SessionHelper sessionHelper;
 
     public void init() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\kobya\\IdeaProjects\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\kobya\\Documents\\GitHub\\java_pft\\Adress-web-tests\\src\\test\\resources\\chromedriver.exe");
         wd = new ChromeDriver();
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         groupHelper = new GroupHelper(wd);
