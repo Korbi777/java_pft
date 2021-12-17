@@ -22,7 +22,7 @@ public class ApplicationManager {
         groupHelper = new GroupHelper(wd);
         navigationHelper = new NavigationHelper(wd);
         sessionHelper = new SessionHelper(wd);
-        wd.get("http://localhost/addressbook/");
+        gotoPageHome();
         sessionHelper.login("admin", "secret");
     }
 
@@ -30,11 +30,15 @@ public class ApplicationManager {
         wd.findElement(By.linkText("groups")).click();
     }
 
+    public void gotoPageHome() {
+        wd.get("http://localhost/addressbook/");
+    }
+
     public void gotoPageAddNewContact() {
         wd.get("http://localhost/addressbook/edit.php");
     }
 
-    public void chekingCreationPage() {
+    public void checkingCreationPage() {
         wd.findElement(By.linkText("home")).click();
     }
 
