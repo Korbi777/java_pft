@@ -8,7 +8,7 @@ public class deleteContactTest extends TestBase{
     public void testDeleteContact() {
         app.gotoPageHome();
         app.getGroupHelper().selectedGroup();
-        app.getGroupHelper().deleteContact();
+        app.getContactHelper().deleteContact();
         app.getGroupHelper().closingAlertWindow();
         app.getGroupHelper().returnToGroupPage();
     }

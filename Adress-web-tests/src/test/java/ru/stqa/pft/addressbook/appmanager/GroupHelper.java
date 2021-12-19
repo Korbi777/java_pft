@@ -44,15 +44,4 @@ public class GroupHelper extends HelperBase {
         click(By.name("update"));
     }
 
-    public void deleteContact() {
-        click(By.xpath("//input[@value='Delete']"));
-    }
-
-    public void closingAlertWindow() {
-        wd.switchTo().alert().accept();
-    }
-
-    public void initContactModification() {
-        click(By.xpath("//img[@alt='Edit']"));
-    }
 }
