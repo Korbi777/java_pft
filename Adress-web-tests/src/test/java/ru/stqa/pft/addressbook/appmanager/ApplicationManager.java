@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import ru.stqa.pft.addressbook.model.inputDataContact;
+import ru.stqa.pft.addressbook.model.InputDataContact;
 
 import java.util.concurrent.TimeUnit;
 
@@ -48,7 +48,7 @@ public class ApplicationManager {
         wd.findElement(By.name("submit")).click();
     }
 
-    public void dataInputContact(inputDataContact inputDataContact) {
+    public void dataInputContact(InputDataContact inputDataContact) {
         wd.findElement(By.name("firstname")).click();
         wd.findElement(By.name("firstname")).clear();
         wd.findElement(By.name("firstname")).sendKeys(inputDataContact.getFirstname());
