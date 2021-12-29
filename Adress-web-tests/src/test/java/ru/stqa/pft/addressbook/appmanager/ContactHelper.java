@@ -10,6 +10,10 @@ public class ContactHelper extends HelperBase {
         super(wd);
     }
 
+    public void gotoPageAddNewContact() {
+        wd.get("http://localhost/addressbook/edit.php");
+    }
+
     public void dataInputContact(InputDataContact inputDataContact) {
         wd.findElement(By.name("firstname")).click();
         wd.findElement(By.name("firstname")).clear();

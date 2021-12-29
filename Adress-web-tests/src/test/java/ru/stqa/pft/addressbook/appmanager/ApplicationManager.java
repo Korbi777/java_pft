@@ -36,10 +36,6 @@ public class ApplicationManager {
         wd.get("http://localhost/addressbook/");
     }
 
-    public void gotoPageAddNewContact() {
-        wd.get("http://localhost/addressbook/edit.php");
-    }
-
     public void checkingCreationPage() {
         wd.findElement(By.linkText("home")).click();
     }
