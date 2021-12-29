@@ -8,8 +8,8 @@ public class AddNewContactTest extends TestBase {
     @Test
     public void testGroupCreation() throws Exception {
         app.gotoPageAddNewContact();
-        app.dataInputContact(new InputDataContact("Sergey", "Sasha", "Ivanov", "sergey41", "hi!", "RSHB", "g. Moscow", "Russia", "+79003331234"));
-        app.dataStorageContact();
+        app.getContactHelper().dataInputContact(new InputDataContact("Sergey", "Sasha", "Ivanov", "sergey41", "hi!", "RSHB", "g. Moscow", "Russia", "+79003331234"));
+        app.getContactHelper().dataStorageContact();
         app.checkingCreationPage();
         app.getContactHelper().logOut();
     }
